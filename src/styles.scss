@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+.autocomplete-results {
+  position: absolute;
+  border: 1px solid rgba(150, 145, 145, 0.54);
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  margin: 0;
+  margin-top: -4px;
+  padding: 0;
+  list-style: none;
+  transition: none;
+  overflow-y: scroll;
+  max-height: 250px;
+}
+
+.autocomplete-result:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.autocomplete-result.selected {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.search-result {
+  margin-left: 8px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.search-item:hover {
+  color: #4caf50;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* General layout and typography stuff */
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+// p:hover {
+// margin-bottom: 1.3em;
+// line-height: 1.618;
+// background-color: #4caf50;
+// }
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 4.236em;
+    font-weight: 300;
+  }
+
+  p {
+    // font-size: 1.3em;
+  }
+}

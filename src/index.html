@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ecommerce</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700' rel='stylesheet'
+    type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <!-- CSS Style -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <!-- font-awesome & simple line icons CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" media="all">
+  <link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css" media="all">
+  <!-- owl.carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.transitions.css">
+  <!-- animate CSS  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css" media="all">
+  <!-- flexslider CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css">
+  <!-- jquery-ui.min CSS  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+  <!-- Revolution Slider CSS -->
+  <link href="assets/css/revolution-slider.css" rel="stylesheet">
+  <!-- style CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
+
+  <!-- jquery js -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- owl.carousel.min js -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <!-- bxslider js -->
+  <script src="assets/js/jquery.bxslider.js"></script>
+  <!-- Slider Js -->
+  <script src="assets/js/revolution-slider.js"></script>
+  <!-- megamenu js -->
+  <script src="assets/js/megamenu.js"></script>
+  <script>
+    /* <![CDATA[ */
+    var mega_menu = '0';
+
+    /* ]]> */
+  </script>
+  <!-- jquery.mobile-menu js -->
+  <script src="assets/js/mobile-menu.js"></script>
+  <!--jquery-ui.min js -->
+  <script src="assets/js/jquery-ui.js"></script>
+  <!-- main js -->
+  <script src="assets/js/main.js"></script>
+  <!-- countdown js -->
+  <script src="assets/js/countdown.js"></script>
+</head>
+
+<body id="body">
+  <app-root></app-root>
+
+
+</body>
+<!-- Revolution Slider -->
+<script>
+  jQuery(document).ready(function () {
+    jQuery('.tp-banner').revolution(
+      {
+        delay: 9000,
+        startwidth: 1920,
+        startheight: 790,
+        hideThumbs: 10,
+        navigationType: "bullet",
+        navigationStyle: "preview1",
+        hideArrowsOnMobile: "on",
+
+        touchenabled: "on",
+        onHoverStop: "on",
+        spinner: "spinner4"
+      });
+  });
+</script>
+<!-- Hot Deals Timer 1-->
+<script>
+  var dthen1 = new Date("12/25/16 11:59:00 PM");
+  start = "08/04/15 03:02:11 AM";
+  start_date = Date.parse(start);
+  var dnow1 = new Date(start_date);
+  if (CountStepper > 0)
+    ddiff = new Date((dnow1) - (dthen1));
+  else
+    ddiff = new Date((dthen1) - (dnow1));
+  gsecs1 = Math.floor(ddiff.valueOf() / 1000);
+
+  var iid1 = "countbox_1";
+  CountBack_slider(gsecs1, "countbox_1", 1);
+</script>
+
+</html>

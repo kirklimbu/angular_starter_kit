@@ -1,0 +1,70 @@
+<!-- <div class="family-members-img-container">
+
+  <img class="family-members-img" alt='profile image' [src]="imageSrc" (click)='fileInput.click()' />
+  <div class="message-body ml-3 mt-3">
+    {{ fileName  }}
+  </div>
+</div>
+<div>
+  <div>
+    <div class="file has-name is-primary is-fullwidth">
+      <label class="file-label">
+        <input style="display: none;" type="file" name="file" #fileInput (change)="onChange($event)" />
+      </label>
+    </div>
+  </div>
+
+  <article class="message" *ngIf="infoMessage">
+    <div class="message-body">
+      {{ infoMessage }}
+    </div>
+  </article>
+
+</div> -->
+<!-- <div class="field" *ngIf="!infoMessage">
+    <div class="control">
+      <progress
+        class="progress is-primary"
+        [attr.value]="progress"
+        max="100"
+      ></progress>
+    </div>
+  </div> -->
+<!--begin: second example -->
+<ng-container>
+  <div class="file-container mb-2" appDnd (fileDropped)="onFileDropped($event)">
+    <input type="file" #fileDropRef id="fileDropRef" (change)="fileBrowseHandler($event)" />
+
+    <h6><span style="cursor: pointer;" class="click-here"><strong>Click Here</strong></span> Or <strong>Drag and
+        Drop</strong> to upload </h6>
+    <h6>document.</h6>
+  </div>
+  <ng-container *ngIf="file">
+    <div class="files-list " style="max-height: 15vh; overflow-y: scroll;">
+      <div class="single-file">
+        <div class="info">
+          <h4 class="name" style="word-break: break-all;">
+            {{ file?.documentName }}
+          </h4>
+          <p class="size">
+            {{ file?.fileSize }}
+          </p>
+          <!-- <app-progress [progress2]="getProgress(_file.savedName) | async | number: '1.1-1'"></app-progress> -->
+        </div>
+        <!-- <i aria-hidden="true" title="Delete" class="far fa-trash-alt text-danger mr-4" (click)="onDeleteFile()"></i>
+        <i aria-hidden="true" title="View"
+          [ngClass]="showFile?'far fa-eye text-primary m-4':'far fa-eye-slash text-primary m-4'"
+          (click)="viewFile()">
+        </i> -->
+
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+<div class="container w-80">
+  <ng-container *ngIf="showFile">
+
+    <!-- <pdf-viewer [src]="pdfSrc" [render-text]="true" [original-size]="true" [fit-to-page]="true">
+    </pdf-viewer> -->
+  </ng-container>
+</div>
